@@ -1,5 +1,7 @@
+import React from 'react';
+import PokemonCard from '@/components/PokemonCard';
+import styles from '../styles/PokemonList.module.css';
 import Link from "next/link";
-import styles from '../styles/Home.module.css';
 
 interface Pokemon {
     name: string;
@@ -7,19 +9,23 @@ interface Pokemon {
 }
 
 interface PokemonListProps {
-    pokemonList: Pokemon[];
+    pokemons: Pokemon[];
 }
 
-export default function PokemonList({ pokemonList }: PokemonListProps) {
+const PokemonList = ({ pokemons }: PokemonListProps) => {
     return (
-        <ul className={styles.list}>
-            {pokemonList.map((pokemon, index) => (
-                <li key={index} className={styles.listItem}>
-                    <Link href={`/details/${pokemon.name}`}>
-                        {pokemon.name}
-                    </Link>
-                </li>
+        <div className={styles.listContainer}>
+            {pokemons.map((pokemon) => (
+                <Link key={pokemon.name} href={`/details/${pokemon.name}`} passHref>
+                    <PokemonCard
+                        key={pokemon.name}
+                        name={pokemon.name}
+                        url={pokemon.url} // Passing the URL to fetch the sprite within PokemonCard
+                    />
+                </Link>
             ))}
-        </ul>
+        </div>
     );
-}
+};
+
+export default PokemonList;

@@ -1,0 +1,14 @@
+/* styles/Footer.module.css */
+
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid #444;
+}
+
+.footer p {
+    margin: 0;
+}

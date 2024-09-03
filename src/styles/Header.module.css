@@ -1,0 +1,47 @@
+/* styles/Header.module.css */
+
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 24px;
+    letter-spacing: 1.5px;
+}
+
+.header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.header nav a:hover {
+    color: #ddd;
+}
+
+
+.homeButton {
+    background-color: #ffe241;
+    color: #000000 !important;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.homeButton:hover {
+    background-color: #FFC300;
+}

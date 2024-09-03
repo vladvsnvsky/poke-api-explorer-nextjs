@@ -1,0 +1,118 @@
+.container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.searchForm {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.searchInput {
+    width: 70%;
+    padding: 10px;
+    border-radius: 8px 0 0 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.searchButton {
+    padding: 10px 20px;
+    background-color: #0070f3;
+    color: #fff;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.searchButton:hover {
+    background-color: #005bb5;
+}
+
+.searchButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.sortSection {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sortLabel {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.sortSelect {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.resultCount {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.listItem {
+    padding: 10px;
+    background-color: #f8f8f8;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.listItem:hover {
+    background-color: #e0e0e0;
+}
+
+.loadMoreButton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #0070f3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.loadMoreButton:hover {
+    background-color: #005bb5;
+}
+
+.loadMoreButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

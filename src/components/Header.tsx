@@ -6,7 +6,7 @@ export default function Header() {
     return (
         <header className={styles.header}>
             <nav className={styles.nav}>
-                <h1>PokeApi Data Fetcher Next.js 13</h1>
+                <h1>PokeApi Explorer Next.js 13</h1>
                 <Link href="/" className={styles.homeButton}>
                     Home
                 </Link>
