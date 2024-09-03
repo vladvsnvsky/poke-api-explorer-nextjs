@@ -10,6 +10,8 @@ interface PokemonDetailsPageProps {
     };
 }
 
+const POKEMON_DETAILS_API_URL = 'https://pokeapi.co/api/v2/pokemon/';
+
 const PokemonDetailsPage = ({ params }: PokemonDetailsPageProps) => {
     const [data, setData] = useState<PokemonDetails | null>(null);
     const [searchTerm, setSearchTerm] = useState<string>('');
@@ -18,7 +20,7 @@ const PokemonDetailsPage = ({ params }: PokemonDetailsPageProps) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const fetchedData: PokemonDetails = await fetchPokemonDetails(`https://pokeapi.co/api/v2/pokemon/${params.name}`);
+                const fetchedData: PokemonDetails = await fetchPokemonDetails(`${POKEMON_DETAILS_API_URL}${params.name}`);
                 setData(fetchedData);
             } catch (error) {
                 setError('Pokémon not found');

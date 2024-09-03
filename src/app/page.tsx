@@ -5,6 +5,8 @@ import { fetchPokemon, Pokemon } from "@/utils/fetchPokemons";
 import PokemonList from "@/components/PokemonList";
 import styles from "@/styles/Home.module.css";
 
+const POKEMON_API_URL = 'https://pokeapi.co/api/v2/pokemon?limit=20';
+
 const HomePage = () => {
     const [pokemonList, setPokemonList] = useState<Pokemon[]>([]);
     const [nextUrl, setNextUrl] = useState<string | null>(null);
@@ -15,7 +17,7 @@ const HomePage = () => {
 
     useEffect(() => {
         const fetchInitialPokemon = async () => {
-            const data = await fetchPokemon('https://pokeapi.co/api/v2/pokemon?limit=20');
+            const data = await fetchPokemon(POKEMON_API_URL);
             setPokemonList(data.results);
             setTotalNumber(data.count);
             setNextUrl(data.next);
